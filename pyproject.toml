@@ -1,0 +1,27 @@
+[project]
+name = "power-outage-tracker"
+version = "0.3.0"
+description = "Restart-safe Home Assistant power outage tracking"
+requires-python = ">=3.13"
+
+[project.urls]
+Homepage = "https://github.com/harvasyuk/power-outage-tracker"
+Issues = "https://github.com/harvasyuk/power-outage-tracker/issues"
+
+[project.optional-dependencies]
+test = [
+  "homeassistant>=2025.12.0",
+  "pytest>=8.0",
+  "pytest-homeassistant-custom-component>=0.13.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+target-version = "py313"
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]

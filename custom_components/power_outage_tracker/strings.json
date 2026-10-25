@@ -1,0 +1,100 @@
+{
+  "title": "Power Outage Tracker",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Choose power-monitoring plugs",
+        "description": "A normal state from either plug proves power is present. An outage is possible only when every configured plug is unavailable.",
+        "data": {
+          "name": "Tracker name",
+          "source_entity_1": "Primary smart plug",
+          "source_entity_2": "Secondary smart plug (optional)"
+        }
+      },
+      "delays": {
+        "title": "Set confirmation delays",
+        "description": "These delays prevent startup and brief connectivity changes from being recorded as power outages.",
+        "data": {
+          "startup_grace": "Startup grace period",
+          "outage_delay": "Outage confirmation delay",
+          "restore_delay": "Restoration confirmation delay"
+        }
+      }
+    },
+    "error": {
+      "invalid_name": "Enter a name between 1 and 64 characters",
+      "duplicate_source": "Choose a different secondary plug"
+    },
+    "abort": {
+      "already_configured": "A tracker with these plugs is already configured"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Power Outage Tracker settings",
+        "description": "Add, replace, or remove the optional secondary plug and adjust the confirmation delays. A normal state from either configured plug proves power is present.",
+        "data": {
+          "source_entity_1": "Primary smart plug",
+          "source_entity_2": "Secondary smart plug (optional)",
+          "startup_grace": "Startup grace period",
+          "outage_delay": "Outage confirmation delay",
+          "restore_delay": "Restoration confirmation delay"
+        }
+      }
+    },
+    "error": {
+      "duplicate_source": "Choose a different secondary plug",
+      "already_configured": "A tracker with these plugs is already configured"
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "grid_power": {
+        "name": "Grid power"
+      }
+    },
+    "sensor": {
+      "monitoring_status": {
+        "name": "Monitoring status",
+        "state": {
+          "starting": "Starting",
+          "tracking": "Tracking",
+          "possible_outage": "Possible outage",
+          "possible_restore": "Possible restoration",
+          "waiting_for_source": "Waiting for source"
+        }
+      },
+      "current_period_duration": {
+        "name": "Current period duration"
+      },
+      "current_period_started": {
+        "name": "Current period started"
+      },
+      "last_outage_duration": {
+        "name": "Last outage duration"
+      },
+      "last_outage_started": {
+        "name": "Last outage started"
+      },
+      "last_power_duration": {
+        "name": "Last power duration"
+      },
+      "last_power_started": {
+        "name": "Last power started"
+      },
+      "power_duration_display": {
+        "name": "Power duration"
+      },
+      "outage_duration_display": {
+        "name": "Outage duration"
+      },
+      "power_time_display": {
+        "name": "Power time"
+      },
+      "outage_time_display": {
+        "name": "Outage time"
+      }
+    }
+  }
+}

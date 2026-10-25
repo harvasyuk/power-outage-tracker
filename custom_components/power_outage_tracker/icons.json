@@ -1,0 +1,30 @@
+{
+  "entity": {
+    "sensor": {
+      "last_outage_duration": {
+        "default": "mdi:timer-sand-empty"
+      },
+      "last_outage_started": {
+        "default": "mdi:clock-outline"
+      },
+      "last_power_duration": {
+        "default": "mdi:timer-sand-full"
+      },
+      "last_power_started": {
+        "default": "mdi:clock"
+      },
+      "power_duration_display": {
+        "default": "mdi:flash"
+      },
+      "outage_duration_display": {
+        "default": "mdi:flash-outline"
+      },
+      "power_time_display": {
+        "default": "mdi:clock"
+      },
+      "outage_time_display": {
+        "default": "mdi:clock-outline"
+      }
+    }
+  }
+}

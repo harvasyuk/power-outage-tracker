@@ -1,0 +1,11 @@
+{
+  "domain": "power_outage_tracker",
+  "name": "Power Outage Tracker",
+  "version": "0.3.0",
+  "documentation": "https://github.com/harvasyuk/power-outage-tracker",
+  "issue_tracker": "https://github.com/harvasyuk/power-outage-tracker/issues",
+  "codeowners": ["@harvasyuk"],
+  "config_flow": true,
+  "iot_class": "calculated",
+  "integration_type": "device"
+}
